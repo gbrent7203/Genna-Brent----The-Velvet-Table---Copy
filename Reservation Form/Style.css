@@ -1,0 +1,148 @@
+/* General Body Styling */
+body {
+    font-family: "Arial", sans-serif; 
+    background-color: #002F49; /* Same as menu */
+    color: #FEF1D5; /* Same as menu */
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 1rem; /* Consistent with the menu */
+}
+
+/* Container Styling */
+.container {
+    margin-bottom: 50px;
+}
+
+/* Card Styling */
+.animated-card {
+    background-color: #003D62; /* Consistent with menu-section */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Same as menu */
+    color: #FEF1D5; /* Same as menu */
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Input and Select Fields */
+.animated-input {
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    background-color: #ffffff99;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.animated-input:focus {
+    border-color: #800000; /* Matches menu hover */
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(255, 175, 189, 0.5); /* Subtle highlight */
+}
+
+/* Submit Button */
+.animated-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #800000; /* Matches menu hover */
+    color: #FEF1D5; /* Same as menu */
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.animated-btn:hover {
+    background-color: #003D62; /* Matches menu-section */
+    transform: scale(1.05);
+}
+
+/* Success Message */
+.success-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+.success-message.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.success-box {
+    background-color: #FEF1D5; /* Matches menu color */
+    padding: 20px;
+    border-radius: 10px;
+    color: #800000; /* Matches menu hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    animation: popIn 0.5s ease forwards;
+    transform-style: preserve-3d;
+}
+
+/* Card Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 3D Success Animation */
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: rotateX(-90deg) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: rotateX(0deg) scale(1);
+    }
+}
+
+
+
+
+
+
+
+
+/* Position the back button at the bottom left */
+.back-button-container {
+    position: fixed;
+    bottom: 20px;  
+    left: 20px;    
+    z-index: 1000; 
+}
+
+.back-button-container button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #800000; 
+    color: #FEF1D5;
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.back-button-container button:hover {
+    background-color: #003D62;
+    transform: scale(1.05);
+}
+
