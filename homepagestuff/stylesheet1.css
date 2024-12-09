@@ -51,10 +51,12 @@ nav a:hover {
     color: #FEF1D5;
     border-radius: 4px;
 }
+
 .container {
     text-align: center;
     color: white;
 }
+
 .quote {
     position: absolute;
     top: 50%;
@@ -62,24 +64,29 @@ nav a:hover {
     transform: translate(-50%, -50%);
     font-family: "filmotype-lacrosse", sans-serif !important;
 }
+
 .img {
     overflow: scroll;
+    border-radius: 10px;
 }
+
 .intro {
     padding: 50px;
     font-size: 22px;
 }
-#track_reservation:hover{
-     background-color: #002F49;
-color: #FEF1D5;
-border-radius: 10px;
-border-color: #FEF1D5;
+
+#track_reservation:hover {
+    background-color: #5c0101;
+    color: #FEF1D5;
+    border-radius: 10px;
+    border-color: #FEF1D5;
 }
+
 #track_reservation {
     background-color: #800000;
-color:  #FEF1D5;
-font-size: large;
-border-radius: 10px;
-padding: 10px;
-border-color:  #FEF1D5;
+    color: #FEF1D5;
+    font-size: large;
+    border-radius: 10px;
+    padding: 10px;
+    border-color: #FEF1D5;
 }
