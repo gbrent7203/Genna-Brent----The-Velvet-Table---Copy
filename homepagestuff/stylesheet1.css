@@ -60,7 +60,7 @@ nav a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family: "filmotype-lacrosse", sans-serif;
+    font-family: "filmotype-lacrosse", sans-serif !important;
 }
 .img {
     overflow: scroll;
