@@ -90,3 +90,10 @@ nav a:hover {
     padding: 10px;
     border-color: #FEF1D5;
 }
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #800000;
+    color: #FEF1D5;
+    margin-top: 20px;
+}
