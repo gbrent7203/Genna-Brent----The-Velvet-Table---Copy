@@ -69,3 +69,17 @@ nav a:hover {
     padding: 50px;
     font-size: 22px;
 }
+#track_reservation:hover{
+     background-color: #002F49;
+color: #FEF1D5;
+border-radius: 10px;
+border-color: #FEF1D5;
+}
+#track_reservation {
+    background-color: #800000;
+color:  #FEF1D5;
+font-size: large;
+border-radius: 10px;
+padding: 10px;
+border-color:  #FEF1D5;
+}
