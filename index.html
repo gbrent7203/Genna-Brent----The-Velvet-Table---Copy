@@ -5,62 +5,62 @@
     <title>The Velvet Table</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="homepagestuff/stylesheet1.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://use.typekit.net/fdz1wmi.css">
-    </link>
-    <style>
-        .quote {
-            color: #FEF1D5;
-            font-family: "filmotype-lacrosse", serif !important;
-            font-style: bold;
-            font-size: 59px;
-        }
-
-        .intro {
-            font-family: "baskerville-display-pt", serif;
-            font-style: italic;
-            padding: 5%;
-            color: #FEF1D5;
-        } 
-    </style>
 </head>
 
 <body>
     <header>
-        <h1 align="center">The Velvet Table</h1>
+        <h1>The Velvet Table</h1>
     </header>
 
-    <nav>
-
-        <div class="links">
-            <a class="links" href="index.html" target="_blank">Home</a>
-            <a class="links" href="menu.html">Menu</a>
-            <a class="links" href="Reservation.html" target="_blank">Reservation</a>
-            <a class="links" href="about.html" target="_blank">About Us</a>
-            <a class="links" href="contact.html" target="_blank">Contact</a>
+    <nav class="navigation">
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
-
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="reservation.html">Reservation</a>
+            <a href="AboutUs.html">About Us</a>
+            <a href="ContactUs.html">Contact</a>
+        </div>
     </nav>
+
     <div class="container">
-        <img src="homepagestuff/velvettablemain.jpeg" alt="Velvet_table" width="1525px">
-        <div class="quote" class="center">Dining is not just about eating, it's about savoring life's moments, as rich and luxurious as
+        <img src="images/velvettablemain.jpeg" alt="Velvet Table">
+        <div class="quote">Dining is not just about eating, it's about savoring life's moments, as rich and luxurious as
             velvet</div>
-        <div class="intro">
-            <p2>Dive into our dishes inspired by dishes from across the globe. At The Velvet Table, we combine the best
-                international cuisine to create a dining experience that takes you worldwide, one bite at a time. Step
-                into a world of culinary delight, where our passion for exceptional food and impeccable service creates
-                an unforgettable dining experience.</p2>
-        </div>
-        <input type="button" id="track_reservation" value="Track Reservation">
-        <br>
-        <br>
-        <div class="img2">
-            <img src="homepagestuff/tableandglasses.jpeg" alt="Velvet_table" width="1000px">
-        </div>
+            <div class="intro">
+                <p2>Dive into our dishes inspired by dishes from across the globe. At The Velvet Table, we combine the best
+                    international cuisine to create a dining experience that takes you worldwide, one bite at a time. Step
+                    into a world of culinary delight, where our passion for exceptional food and impeccable service creates
+                    an unforgettable dining experience.</p2>
+            </div>
+            <!-- <div class="img2">
+                <img src="images/asianchickensalad.jpg" alt="Velvet_table" width="1000px">
+            </div> -->
     </div>
+    <div class="text-center my-4">
+        <a href="view-reservations.html">
+            <button class="btn btn-primary btn-lg">
+                View Reservations
+            </button>
+        </a>
+    </div>
+    
     <footer class="footer">
         <p>&copy; 2024 The Velvet Table. All rights reserved.</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - The Velvet Table</title>
+    <link rel="stylesheet" href="css/aboutUs.css">
+    <link rel="stylesheet" href="https://use.typekit.net/fdz1wmi.css">
+</head>
+
+
+    <body>
+        <header>
+            <h1>The Velvet Table</h1>
+        </header>
+    
+        <nav class="navigation">
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="menu">
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="reservation.html">Reservation</a>
+                <a href="AboutUs.html">About Us</a>
+                <a href="ContactUs.html">Contact</a>
+            </div>
+        </nav>
+    
+        <section class="about-section">
+            <div class="about-content">
+                <h2>About The Velvet Table</h2>
+                <p>
+                    In 2010, in the vibrant city of Waterloo, four friends—Genna, Joju, Het, and Ashley—decided to turn
+                    their shared love for food into something real. One evening while cooking dinner together, a tradition
+                    they had maintained since college, they started dreaming out loud about opening their own restaurant.
+                </p>
+                <p>
+                    As the aroma of garlic and rosemary filled Genna's apartment, it was clear this was going to be the
+                    beginning of a life-changing new chapter.
+                </p>
+                <p>
+                    This is when The Velvet Table was born.
+                </p>
+            </div>
+            <div class="about-image">
+                <img src="images/cooking.jpeg" alt="A photo of cooking">
+            </div>
+        </section>
+        <footer class="footer">
+            <p>&copy; 2024 The Velvet Table. All rights reserved.</p>
+        </footer>
+    
+        <script>
+            function toggleMenu() {
+                const menu = document.querySelector('.menu');
+                menu.classList.toggle('active');
+            }
+        </script>
+    </body>
+    
+
+
+</html>

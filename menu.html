@@ -5,23 +5,30 @@
     <title>The Velvet Table</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="menupagestuff/menu.css">
+    <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="https://use.typekit.net/ess6wbv.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="menupagestuff/menu.js" defer></script>
+    <script src="js/menu.js" defer></script>
 </head>
 
 <body>
     <header>
-        <h1 class="header-title">The Velvet Table</h1>
+        <h1>The Velvet Table</h1>
     </header>
 
     <nav class="navigation">
-        <a href="index.html" target="_blank">Home</a>
-        <a href="menu.html" target="_blank">Menu</a>
-        <a href="Reservation.html" target="_blank">Reservation</a>
-        <a href="about.html" target="_blank">About Us</a>
-        <a href="contact.html" target="_blank">Contact</a>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="reservation.html">Reservation</a>
+            <a href="AboutUs.html">About Us</a>
+            <a href="ContactUs.html">Contact</a>
+        </div>
     </nav>
 
     <main>
@@ -203,6 +210,12 @@
     <footer class="footer">
         <p>&copy; 2024 The Velvet Table. All rights reserved.</p>
     </footer>
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+    </script>
 </body>
 
 </html>

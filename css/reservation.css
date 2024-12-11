@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+       
+}
+
+
+/* General Styles */
+body {
+    font-family: "baskerville-display-pt", serif;
+    background-color: #002F49;
+    color: #FEF1D5;
+    margin: 0;
+}
+
+h1 {
+    font-family: "filmotype-lacrosse", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3.5em;
+    font-style: normal;
+    background-color: #800000;
+    padding: 12px 12px;
+    color: #FEF1D5;
+    text-align: center;
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #002F49;
+    padding: 1rem;
+    color: #FEF1D5;
+    border-bottom: 4px #FEF1D5 solid;
+
+}
+
+nav a {
+    color: #002F49;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+    color: #FEF1D5;
+    font-family: "baskerville-display-pt", serif;
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+nav a:hover {
+    background-color: #800000;
+    color: #FEF1D5;
+    border-radius: 4px;
+}
+
+nav .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+nav .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #FEF1D5;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+nav .menu.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align the items */
+    gap: 1rem;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%); /* Center the menu */
+    background-color: #002F49;
+    width: 90%; /* Slight margin from edges */
+    padding: 1rem;
+    z-index: 10;
+    border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+/* Card Styling */
+.animated-card {
+    background-color: #003D62;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: #FEF1D5;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Input and Select Fields */
+.animated-input {
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    background-color: #ffffff99;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.animated-input:focus {
+    border-color: #800000;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(255, 175, 189, 0.5);
+}
+
+/* Submit Button */
+.animated-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #800000;
+    color: #FEF1D5;
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.animated-btn:hover {
+    background-color: #003D62;
+    transform: scale(1.05);
+}
+
+/* Success Message */
+.success-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+.success-message.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.success-box {
+    background-color: #FEF1D5;
+    padding: 20px;
+    border-radius: 10px;
+    color: #800000;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #800000;
+    color: #FEF1D5;
+    margin-top: 20px;
+}
+
+/* Card Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .header-title {
+        font-size: 2.8em;
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+    }
+
+    .navigation {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navigation.active {
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-title {
+        font-size: 2em;
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 3D Success Animation */
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: rotateX(-90deg) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: rotateX(0deg) scale(1);
+    }
+}

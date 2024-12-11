@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>The Velvet Table</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/contactUs.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/fdz1wmi.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>The Velvet Table</h1>
+    </header>
+
+    <nav class="navigation">
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="reservation.html">Reservation</a>
+            <a href="AboutUs.html">About Us</a>
+            <a href="ContactUs.html">Contact</a>
+        </div>
+    </nav>
+
+    
+
+    
+
+    
+
+    <section class="contact-section">
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you! Feel free to reach out for reservations, inquiries, or feedback.</p>
+
+        
+
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </section>
+    <div class="center-container">
+        <div id="map"></div>
+        <div class="contact-info">
+            <p><strong>Address:</strong> 123 King Street S., Waterloo, ON</p>
+            <p><strong>Phone:</strong> (226)123-1223</p>
+            <p><strong>Email:</strong> <a class="formail" href="mailto:tvt@gmail.com">tvt@gmail.com</a></p>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 The Velvet Table. All rights reserved.</p>
+    </footer>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+            alert("Thanks for contacting us! We'll contact you shortly.");
+            event.target.reset(); // Reset the form fields
+        }
+
+        // Initialize Leaflet Map
+        //using live map from online source where user can find location in the map
+        // Added this code from online source as well as learn how it works
+        
+        const map = L.map('map').setView([43.4643, -80.5204], 15); // Coordinates for Waterloo, ON
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([43.4643, -80.5204]).addTo(map)
+            .bindPopup('The Velvet Table<br>123 King Street S., Waterloo, ON')
+            .openPopup();
+
+         
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+    
+    </script>
+</body>
+
+</html>
