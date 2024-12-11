@@ -127,7 +127,7 @@ nav .menu.active {
 }
 .btn {
     display: inline-block;
-    background-color: #007BFF; /* Primary blue */
+    background-color: #800000; /* Primary blue */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -139,7 +139,7 @@ nav .menu.active {
 }
 
 .btn:hover {
-    background-color: #0056b3; /* Darker blue for hover effect */
+    background-color: #003D62; /* Darker blue for hover effect */
 }
 
 .text-center {
